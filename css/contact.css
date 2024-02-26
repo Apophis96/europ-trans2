@@ -23,6 +23,7 @@ body {
 }
 
 .container-contact {
+  background-image: url("../images/headerpreturi.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

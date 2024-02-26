@@ -18,8 +18,6 @@ body {
   letter-spacing: 0.02em;
   margin: 0;
   padding: 0;
-  /* width: 100%;
-  min-height: 100vh; */
 }
 
 header {
@@ -71,16 +69,8 @@ header a {
   margin-right: 156px;
 }
 
-.index {
-  color: var(--accent-color-text);
-  font-weight: 500;
-}
-
-.preturi {
-  color: var(--accent-color-text);
-  font-weight: 500;
-}
-
+.index,
+.preturi,
 .contact {
   color: var(--accent-color-text);
   font-weight: 500;
@@ -96,6 +86,9 @@ header a {
 }
 
 .hero {
+  background-image: url("../images/header\ background.jpg");
+  background-size: cover;
+  background-position: center;
   font-size: 56px;
   font-weight: 700;
   line-height: 70px;
@@ -293,30 +286,6 @@ footer p {
 
 footer a {
   text-decoration: none;
-}
-
-footer .web,
-footer .studio {
-  text-transform: uppercase;
-  width: 115px;
-  font-family: Raleway;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-}
-
-.web-footer {
-  color: #000000;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-}
-
-.studio-footer {
-  color: #000000;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
 }
 
 .logo-footer {
