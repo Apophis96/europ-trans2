@@ -133,7 +133,7 @@ header > nav {
 /******** Main ********/
 /**********************/
 
-/*******Features Section******/
+/*******Servicii Section******/
 
 .what-are {
   justify-content: center;
@@ -205,6 +205,7 @@ p {
 .team img {
   width: 100%;
   height: auto;
+  max-width: 360px;
 }
 
 .team-member {
@@ -255,6 +256,19 @@ footer a {
 
   .images {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .team img {
+    width: 100%;
+    height: 80%;
+    max-width: none;
+  }
+
+  .team-member {
+    width: 100%;
+    padding: 10px;
   }
 }
 

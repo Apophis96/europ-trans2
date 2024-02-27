@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --primary-color: #ffffff;
   --accent-color-iris: #4d5ae5;
@@ -6,96 +12,94 @@
   --button-color-filters: #404bbf;
   --accent-color-filters: #e7e9fc;
   --accent-color-cloud: #f4f4fd;
-  --accent-color-orange: #f2a724;
+  --button-color-orange: #f2a724;
   --accent-color-yellow: #ffeb3b;
   --accent-color-footer: #c94e10;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   background-color: var(--primary-color);
-  font-style: normal;
-  letter-spacing: 0.02em;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
 }
+
+/********* Header  **********/
 
 header {
   background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 105px;
-  text-align: left;
-  align-items: center;
-  border-bottom: 1px solid #e7e9fc;
+  /* height: 6.9rem; */
+
+  padding: 0.5rem 1.5rem;
 }
 
-header a {
-  text-decoration: none;
+.logo img {
+  object-fit: contain;
 }
 
-header .web,
-header .studio {
-  text-transform: uppercase;
-  font-family: "Raleway";
-  font-weight: 800;
-  letter-spacing: 0.03em;
-}
-
-.logo {
+nav {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  font-family: Raleway;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 21px;
-  letter-spacing: 0.03em;
-  text-align: left;
-  margin-left: 156px;
+  justify-content: space-between;
+  column-gap: 2.5rem;
+  flex-wrap: wrap;
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  column-gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+header > a,
+header > nav {
+}
+
+/**********************/
+/******** Main ********/
+/**********************/
+
+/*******Hero Section******/
 
 .hero {
   background-image: url("../images/headerpreturi.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   height: 70vh;
 }
 
 .hero-content {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   align-content: center;
   color: var(--primary-color);
   justify-content: center;
-  font-family: "Raleway";
   font-weight: 800;
-  letter-spacing: 0.03em;
-  font-size: 2em;
   text-shadow: 2px 2px 4px #000000;
+  background-position: center 70%;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+  min-height: 40vh;
 }
 
+/**********************/
+/******** Main ********/
+/**********************/
+
+/*******Content Section******/
+
 .content {
-  background-color: var(--accent-color-cloud);
-  font-family: "Roboto", sans-serif;
+  background-color: var(--primary-color);
   font-weight: 500;
-  letter-spacing: 0.03em;
-  display: flex;
-  /* width: 1200px; */
-  /* margin-top: 2%; */
 }
 
 .content h2 {
-  align-self: center;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  font-size: 1.1em;
 }
 
 .container-content {
@@ -104,204 +108,128 @@ header .studio {
   justify-content: center;
 }
 
-.web {
-  color: var(--accent-color-iris);
-  font-size: 18px;
-  line-height: 21px;
+/**********************/
+/******** Main ********/
+/**********************/
+
+/*******Card Section******/
+
+.card {
+  background-color: var(--accent-color-cloud);
+  margin-top: 2%;
 }
 
-.studio {
-  color: var(--accent-color-text);
-  font-size: 18px;
-  line-height: 21px;
+.team-member {
+  border: 1px solid var(--accent-color-filters);
+  text-align: center;
 }
 
-.main-nav {
+.our-team {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  margin-bottom: 5%;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--accent-color-text);
 }
 
-.main-nav ul {
+.team {
+  list-style: none;
+  justify-content: center;
+  border-radius: 0px 0px 4px 4px;
+  margin-bottom: 1em;
+  gap: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.team img {
+  width: 100%;
+  height: auto;
+  max-width: 360px;
+  object-fit: cover;
+}
+
+.team-member {
+  background-color: var(--primary-color);
+}
+
+/**********************/
+/******** Footer ********/
+/**********************/
+
+/*******Footer******/
+
+ul {
   list-style: none;
   display: flex;
 }
-
-.main-nav ul li {
-  margin-right: 40px;
-}
-
-.main-nav ul li:last-child {
-  margin-right: 156px;
-}
-
-.index {
-  width: 48px;
-  height: 24px;
-  color: var(--accent-color-text);
-  font-weight: 500;
-}
-
-.preturi {
-  width: 66px;
-  height: 24px;
-  color: var(--accent-color-text);
-  font-weight: 500;
-}
-
-.contact {
-  width: 67px;
-  height: 24px;
-  color: var(--accent-color-text);
-  font-weight: 500;
-}
-
-.address a {
-  color: var(--accent-color-description);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-
-.address a:hover {
-  color: var(--accent-color-iris);
-}
-
-ul {
-  text-decoration: none;
-}
-
 footer {
   background-color: var(--accent-color-footer);
-  padding: 50px 0;
+  padding: 3.5em 0;
 }
 
 footer p {
   color: var(--accent-color-cloud);
-  font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.02em;
   text-align: left;
-  margin-left: 156px;
+  padding: 0.5rem 1.5rem;
 }
 
 footer a {
   text-decoration: none;
 }
 
-footer .web,
-footer .studio {
-  text-transform: uppercase;
-  width: 115px;
-  font-family: Raleway;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-}
-
-.web-footer {
-  color: var(--accent-color-iris);
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-}
-
-.studio-footer {
-  color: var(--accent-color-cloud);
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
+.logo-footer img {
+  object-fit: contain;
 }
 
 .logo-footer {
   display: flex;
   align-items: center;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  font-family: Raleway;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 21px;
-  letter-spacing: 0.03em;
-  text-align: left;
-  margin-left: 156px;
+  padding: 0.5rem 1.5rem;
 }
 
-.card {
-  background-color: var(--accent-color-cloud);
-  padding: 100px 0;
-  /* margin-top: 5%; */
+/**********************/
+/******** Media queries ********/
+/**********************/
+
+/******* Media ******/
+
+@media (min-width: 600px) {
+  .features ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .images {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.card team-member1,
-.card team-member2,
-.card team-member3,
-.card team-member4 .card team-member5 {
-  width: 360px;
-  height: 420px;
-  border: 1px solid var(--accent-color-filters);
-  padding: 0 0 32px 0;
-  text-align: center;
+@media (min-width: 768px) {
+  .team img {
+    width: 100%;
+    height: 80%;
+    max-width: none;
+  }
+
+  .team-member {
+    width: 100%;
+    padding: 10px;
+  }
 }
 
-team-member:hover {
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+@media (min-width: 960px) {
+  .features ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .team {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
-.our-team {
-  justify-content: center;
-  display: flex;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  font-family: "Roboto", sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: var(--accent-color-text);
-}
-
-.team {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  padding: 0px 0px 32px 0px;
-  border-radius: 0px 0px 4px 4px;
-  gap: 24px;
-}
-
-.card ul {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  text-align: center;
-}
-
-.card p {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: var(--accent-color-description);
-}
-
-.card h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: var(--accent-color-text);
-}
-
-.team-member {
-  background-color: var(--primary-color);
+@media (min-width: 1200px) {
 }

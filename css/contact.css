@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --primary-color: #ffffff;
   --accent-color-iris: #4d5ae5;
@@ -9,50 +15,87 @@
   --button-color-orange: #f2a724;
   --accent-color-yellow: #ffeb3b;
   --accent-color-footer: #c94e10;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   background-color: var(--primary-color);
-  font-style: normal;
-  letter-spacing: 0.02em;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
+}
+
+/********* Header  **********/
+
+header {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 6.9rem; */
+
+  padding: 0.5rem 1.5rem;
+}
+
+.logo img {
+  object-fit: contain;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  column-gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+header > a,
+header > nav {
 }
 
 .container-contact {
   background-image: url("../images/headerpreturi.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   height: 70vh;
 }
 
+/**********************/
+/******** Main ********/
+/**********************/
+
+/*******Hero Section******/
+
 .hero-content {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   align-content: center;
   color: var(--primary-color);
   justify-content: center;
-  font-family: "Raleway";
   font-weight: 800;
-  letter-spacing: 0.03em;
-  font-size: 2em;
   text-shadow: 2px 2px 4px #000000;
+  background-position: center 70%;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+  min-height: 40vh;
 }
 
+/**********************/
+/******** Main ********/
+/**********************/
+
+/*******Content Section******/
 .content {
   background-color: var(--accent-color-cloud);
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
-  letter-spacing: 0.03em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   height: 60vh;
 }
 
@@ -68,124 +111,51 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 0.5em;
 }
 
 .contact-methods ul {
   padding: 0;
   list-style: none;
-
-  margin: 0;
-}
-
-header {
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 105px;
-
-  align-items: center;
-}
-
-header a {
-  text-decoration: none;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  font-family: Raleway;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 21px;
-  letter-spacing: 0.03em;
-  text-align: left;
-  margin-left: 156px;
-}
-
-.main-nav {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
-.main-nav ul {
+/**********************/
+/******** Footer ********/
+/**********************/
+
+/*******Footer******/
+
+ul {
   list-style: none;
   display: flex;
 }
-
-.main-nav ul li {
-  margin-right: 40px;
-}
-
-.main-nav ul li:last-child {
-  margin-right: 156px;
-}
-
-.index {
-  width: 48px;
-  height: 24px;
-  color: var(--accent-color-text);
-  font-weight: 500;
-}
-
-.preturi {
-  width: 66px;
-  height: 24px;
-  color: var(--accent-color-text);
-  font-weight: 500;
-}
-
-.contact {
-  width: 67px;
-  height: 24px;
-  color: var(--accent-color-text);
-  font-weight: 500;
-}
-
-.address a {
-  color: var(--accent-color-description);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-.address a:hover {
-  color: var(--accent-color-iris);
-}
-
 footer {
   background-color: var(--accent-color-footer);
-  padding: 50px 0;
+  padding: 3.5em 0;
 }
 
 footer p {
   color: var(--accent-color-cloud);
-  font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.02em;
   text-align: left;
-  margin-left: 156px;
+  padding: 0.5rem 1.5rem;
 }
 
 footer a {
   text-decoration: none;
 }
 
+.logo-footer img {
+  object-fit: contain;
+}
+
 .logo-footer {
   display: flex;
   align-items: center;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  font-family: Raleway;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 21px;
-  letter-spacing: 0.03em;
-  text-align: left;
-  margin-left: 156px;
+  padding: 0.5rem 1.5rem;
 }
