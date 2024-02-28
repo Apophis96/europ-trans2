@@ -25,17 +25,41 @@ body {
 /********* Header  **********/
 
 header {
-  background-color: var(--primary-color);
+  background-color: #c2baa6;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* height: 6.9rem; */
 
   padding: 0.5rem 1.5rem;
+
+  position: sticky;
+  right: 0;
+  left: 0;
+  --_header-height: 7rem;
+  height: var(--_header-height);
+  bottom: calc(100vh - var(--_header-height));
+  background: #b8b8b885;
+  backdrop-filter: blur(1rem);
 }
 
 .logo img {
   object-fit: contain;
+}
+
+header ul a {
+  text-decoration: none;
+  opacity: 1;
+
+  transition: opacity 0.15s ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+header ul:nth-child(1) a {
+  text-transform: uppercase;
+  color: #ffffffc4;
 }
 
 nav {
@@ -43,6 +67,8 @@ nav {
   justify-content: space-between;
   column-gap: 2.5rem;
   flex-wrap: wrap;
+
+  font-size: 1.35rem;
 }
 
 nav ul {
@@ -50,10 +76,6 @@ nav ul {
   display: flex;
   column-gap: 2.5rem;
   flex-wrap: wrap;
-}
-
-header > a,
-header > nav {
 }
 
 .container-contact {
