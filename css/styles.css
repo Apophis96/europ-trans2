@@ -16,6 +16,7 @@
   --accent-color-yellow: #ffeb3b;
   --accent-color-footer: #c94e10;
   font-family: "Roboto", sans-serif;
+  --accent-color-whatsapp: #25d366;
 }
 
 body {
@@ -110,7 +111,7 @@ header > nav {
   min-height: 100vh;
 }
 
-.hero a {
+.hero .tel {
   color: var(--primary-color);
   background-color: var(--button-color-orange);
   text-shadow: none;
@@ -118,11 +119,27 @@ header > nav {
   border-radius: 0.5em;
   margin-top: 8em;
   display: inline-block;
+  text-decoration: none;
 }
 
 .hero a:hover {
-  background-color: var(--accent-color-yellow);
+  background-color: var(--accent-color-whatsapp);
   text-shadow: 2px 2px 4px #000000;
+}
+
+.hero div a:hover {
+  background-color: var(--accent-color-whatsapp);
+}
+
+.whats-app {
+  color: var(--primary-color);
+  background-color: var(--button-color-orange);
+  text-shadow: none;
+  padding: 0.3em 0.5em;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  display: inline-block;
+  text-decoration: none;
 }
 
 /**********************/
@@ -189,6 +206,7 @@ header > nav {
   max-width: 70rem;
   margin-inline: auto;
   padding: 1em;
+  font-size: 1em;
 }
 
 .images h3,
@@ -299,7 +317,7 @@ footer a {
   }
 
   .images {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
