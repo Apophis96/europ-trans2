@@ -50,18 +50,11 @@ header {
 header ul a {
   text-decoration: none;
   opacity: 1;
-
   transition: opacity 0.15s ease-in-out;
-
   &:hover {
     opacity: 0.5;
   }
 }
-
-/* header ul a {
-  text-decoration: none;
-  opacity: 1;
-} */
 
 header ul:nth-child(1) a {
   text-transform: uppercase;
