@@ -89,6 +89,7 @@ nav ul {
   background-size: cover;
   background-position: center;
   height: 70vh;
+  text-align: center;
 }
 
 .hero-content {
