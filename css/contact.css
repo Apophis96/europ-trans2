@@ -106,7 +106,7 @@ nav ul {
   text-shadow: 2px 2px 4px #000000;
   background-position: center 70%;
   font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
-  min-height: 40vh;
+  min-height: 55vh;
 }
 
 /**********************/
